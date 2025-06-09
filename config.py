@@ -3,7 +3,7 @@ from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.storage.memory import MemoryStorage
 
-BOT_TOKEN = "7688812737:AAEPRk0v3XrLnCm9Ar56YTcMPYClgo5IlKQ"
+BOT_TOKEN = "547688812737:AAEPRk0v3XrLnCm9Ar56YTcMPYClgo5IlKQ"
 bot = Bot(BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 storage = MemoryStorage()
 
