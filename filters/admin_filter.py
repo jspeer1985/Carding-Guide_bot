@@ -1,6 +1,6 @@
 # filters/admin_filter.py
 
-from aiogram.filters import BaseFilter
+from aiogram.dispatcher.filters import BaseFilter
 from aiogram.types import Message
 from utils.admin_utils import is_admin
 

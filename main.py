@@ -2,15 +2,10 @@ import asyncio
 import logging
 from typing import Any, Dict
 from aiogram import Bot, Dispatcher, F, Router
-from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramBadRequest
 from aiogram.filters import Command, CommandStart
 from aiogram.fsm.storage.memory import MemoryStorage
-from aiogram.types import Message, CallbackQuery, BotCommand
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from aiogram.utils.keyboard import InlineKeyboardBuilder
-from config import BOT_TOKEN, ADMIN_USER_IDS
 from utils.database import Database
 from keyboards.user_keyboard import get_main_user_keyboard
 from utils.states import BotStates
@@ -118,7 +113,6 @@ async def main() -> None:
     dp.include_router(admin_router)
     dp.include_router(bin_router)
     dp.include_router(cards_router)
-    dp.include_router(guide_router)
     dp.startup.register(on_startup)
     dp.shutdown.register(on_shutdown)
     dp.include_router(membership_router)
